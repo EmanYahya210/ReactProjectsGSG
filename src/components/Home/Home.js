@@ -6,15 +6,19 @@ import { useState } from 'react'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 import Toast from 'react-bootstrap/Toast'
-
 import 'animate.css'
+import HomeBG from './../../HomeBG.json'
+import Lottie from 'lottie-react'
+import Trophy from './../../Trophy.json'
+import peopleWorkingWithTechnology from './../../peopleWorkingWithTechnology.json'
 
 export default function Home() {
   const [showA, setShowA] = useState(true)
   const toggleShowA = () => setShowA(!showA)
 
   return (
-    <div className="aboutMe">
+    /* Header Start Here */
+    <div>
       <header>
         <div className="container">
           <div className="row">
@@ -23,8 +27,10 @@ export default function Home() {
                 <h2>Hi , I am Eman Yahya</h2>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Temporibus vitae corporis ipsam ullam sapiente. Cum eos
-                  facilis deleniti autem quod.
+                  Reprehenderit officia eaque repudiandae repellendus doloremque
+                  deserunt, amet veniam beatae in fugiat autem nesciunt eum
+                  eligendi perspiciatis dicta fuga! Iure doloribus magnam ad
+                  laborum nihil reiciendis dolorem.
                 </p>
                 <Row>
                   <Col md={6} className="mb-2">
@@ -47,17 +53,16 @@ export default function Home() {
               </div>
             </div>
             <div className="col-lg-6">
-              <div
-                id="MyPicBg"
-                className="animate__animated animate__zoomInDown "
-              >
-                <img src={BG} alt="My Pic" />
+              <div>
+                <Lottie animationData={HomeBG} loop={true} />
               </div>
             </div>
           </div>
         </div>
       </header>
+      {/* Header Start Here  */}
 
+      {/* Section 1 (Cards) Start Here */}
       <section>
         <div className="container">
           <div className="row">
@@ -97,31 +102,88 @@ export default function Home() {
             </div>
           </div>
         </div>
+        {/* Section 1 (Cards) End Here  */}
+
+        {/* Section 2  Start Here  */}
+        <section className="seniorPro">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-6">
+                <div className="seniorPriImg">
+                  <Lottie
+                    animationData={peopleWorkingWithTechnology}
+                    loop={true}
+                  />
+                </div>
+              </div>
+              <div className="col-lg-6">
+                <div className="aboutSeniorPro">
+                  <h2>Eey Controlled Game for the Disabled People</h2>
+                  <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Odio rerum ut alias reiciendis quos totam assumenda,
+                    dignissimos quaerat itaque. Id aperiam mollitia tempore ab
+                    iste iure voluptatibus ea deleniti, dolor sapiente
+                    excepturi. Nisi numquam magni sint ratione repellendus fugit
+                    excepturi laudantium tempore qui ex minus nobis alias, ullam
+                    sunt animi expedita quos sequi impedit beatae tenetur? Odit
+                    distinctio atque nam?
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </section>
 
+      {/* Section 3 start here */}
       <section id="contactInfo">
         <div className="row">
           <div className="col-lg-12 .d-md">
-            <div className="languages">
-              <div className="sun">
-                <span className="mid">
-                  <p>hiiiiiii</p>
-                </span>
-                <span className="ico1 icon">
-                  <strong>Html5</strong>
-                </span>
-                <span className="ico2 icon">
-                  <strong>CSS3</strong>
-                </span>
-                <span className="ico3 icon">
-                  <strong>React</strong>
-                </span>
-                <span className="ico4 icon">
-                  <strong>Redux</strong>
-                </span>
-                <span className="ico5 icon">
-                  <strong>Api</strong>
-                </span>
+            <div className="socialMedia">
+              <div className="mainCycle">
+                <span className="mid"></span>
+                <a
+                  href="https://www.facebook.com/eman.alsayedd/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="ico1 icon">
+                    <strong>Facebook</strong>
+                  </span>
+                </a>
+                <a
+                  href="https://www.instagram.com/eng.eman_3/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="ico2 icon">
+                    <strong>Instagram</strong>
+                  </span>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/eman-yahya-0429aa231/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="ico3 icon">
+                    <strong>LinkedIn</strong>
+                  </span>
+                </a>
+                <a href="#">
+                  <span className="ico4 icon">
+                    <strong>Phone</strong>
+                  </span>
+                </a>
+                <a
+                  href="https://github.com/EmanYahya210"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="ico5 icon">
+                    <strong>GitHub</strong>
+                  </span>
+                </a>
               </div>
             </div>
           </div>

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './style.css'
 import Form from 'react-bootstrap/Form'
 import Swal from 'sweetalert2'
+import Button from 'react-bootstrap/Button'
 
 export default function Counter() {
   const [text, setText] = useState('')
@@ -9,7 +10,7 @@ export default function Counter() {
   const LowerCase = () => {
     Swal.fire({
       title: 'Are you sure?',
-      text: "Do you want to change the letter to Lowercase letters?",
+      text: 'Do you want to change the letter to Lowercase letters?',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
@@ -25,7 +26,7 @@ export default function Counter() {
   const UpperCase = () => {
     Swal.fire({
       title: 'Are you sure?',
-      text: "Do you want to change the letter to Uppercase letters?",
+      text: 'Do you want to change the letter to Uppercase letters?',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
@@ -42,11 +43,11 @@ export default function Counter() {
     <div className="counter">
       <div className="container">
         <div className="row">
-          <div className="col-lg-6">
+          <div className="col-lg-6 ">
             <p>Letters : </p>
             <p className="count"> {text.length}</p>
           </div>
-          <div className="col-lg-6">
+          <div className="col-lg-6  ">
             <p>words : </p>
             <p className="count">
               {text.length > 0 ? text.split(' ').length : 0}
@@ -57,7 +58,7 @@ export default function Counter() {
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
-            <Form>
+            <Form className="textBox">
               <Form.Group
                 className="mb-3"
                 controlId="exampleForm.ControlTextarea1"
@@ -76,18 +77,16 @@ export default function Counter() {
           </div>
         </div>
       </div>
-
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
             <div className="button-box">
-              <button type="button" class="btn btn-light" onClick={UpperCase}>
+              <Button variant="warning" onClick={UpperCase}>
                 Click to UpperCase
-              </button>
-
-              <button type="button" class="btn btn-light" onClick={LowerCase}>
+              </Button>
+              <Button variant="warning" onClick={LowerCase}>
                 Click to Lowercase
-              </button>
+              </Button>
             </div>
           </div>
         </div>
